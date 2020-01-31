@@ -3,6 +3,7 @@ import { hot } from 'react-hot-loader';
 import 'assets/scss/App.scss';
 import ContactPage from 'components/ContactPage';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+import '@zeit-ui/style';
 
 class App extends React.PureComponent {
   render() {

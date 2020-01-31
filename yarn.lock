@@ -1388,6 +1388,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zeit-ui/style@npm:^0.9.3":
+  version: 0.9.3
+  resolution: "@zeit-ui/style@npm:0.9.3"
+  checksum: c1b5f4dbeffa4105d492f7d391be867d793c1eef64ba93693c1e786869594c76a62880499567412dc6c55b5dd3e22089fe62b18d12a8316e405e4d99438e69b6
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:1":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -3084,6 +3091,7 @@ __metadata:
     "@babel/preset-react": ^7.7.4
     "@hot-loader/react-dom": ^16.11.0
     "@types/react": ^16.0.0
+    "@zeit-ui/style": ^0.9.3
     babel-core: ^7.0.0-bridge.0
     babel-loader: ^8.0.6
     babel-plugin-module-resolver: ^4.0.0
