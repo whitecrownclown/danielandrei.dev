@@ -18,13 +18,13 @@
     "url": "git+https://github.com/whitecrownclown/danielandrei.dev.git"
   },
   "scripts": {
-    "build": "yarn run clean-dist && webpack -p --config=configs/webpack/prod",
+    "build": "npm run clean-dist && webpack -p --config=configs/webpack/prod",
     "clean-dist": "rimraf dist/*",
     "prettier-write": "prettier --write \"{src,tests}/**/*.{js,jsx,css,scss}\"",
     "prettier-check": "prettier --list-different \"{src,tests}/**/*.{js,jsx,css,scss}\"",
-    "start": "yarn run start-dev",
+    "start": "npm run start-dev",
     "start-dev": "webpack-dev-server --config=configs/webpack/dev",
-    "start-prod": "yarn run build"
+    "start-prod": "npm run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.7",
