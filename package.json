@@ -19,8 +19,8 @@
   },
   "scripts": {
     "prebuild": "yarn policies set-version berry",
-    "build": "yarn clean-public && webpack -p --config=configs/webpack/prod",
-    "clean-public": "rimraf public/*",
+    "build": "yarn clean-dist && webpack -p --config=configs/webpack/prod",
+    "clean-dist": "rimraf public/*",
     "prettier-write": "prettier --write \"{src,tests}/**/*.{js,jsx,css,scss}\"",
     "prettier-check": "prettier --list-different \"{src,tests}/**/*.{js,jsx,css,scss}\"",
     "start": "yarn start-dev",
@@ -32,6 +32,7 @@
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.7.4",
     "@hot-loader/react-dom": "^16.11.0",
+    "@types/react": "^16.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^4.0.0",
