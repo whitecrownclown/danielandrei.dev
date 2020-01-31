@@ -158,6 +158,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["identity-obj-proxy", "npm:3.0.0"],
             ["image-webpack-loader", "npm:6.0.0"],
             ["node-sass", "npm:4.13.1"],
+            ["pnp-webpack-plugin", "npm:1.6.0"],
             ["prettier", "npm:1.19.1"],
             ["react", "npm:16.12.0"],
             ["react-dom", "virtual:742c060d3b8e0ae7893b155b507d7fe4c9f671265cbca6a0f32c035a18790d4295efa0f6ce523d65fa707fe4218b15f4cf1385c7b6c5dffcabcbaf22be210920#npm:16.12.0"],
@@ -3776,6 +3777,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["identity-obj-proxy", "npm:3.0.0"],
             ["image-webpack-loader", "npm:6.0.0"],
             ["node-sass", "npm:4.13.1"],
+            ["pnp-webpack-plugin", "npm:1.6.0"],
             ["prettier", "npm:1.19.1"],
             ["react", "npm:16.12.0"],
             ["react-dom", "virtual:742c060d3b8e0ae7893b155b507d7fe4c9f671265cbca6a0f32c035a18790d4295efa0f6ce523d65fa707fe4218b15f4cf1385c7b6c5dffcabcbaf22be210920#npm:16.12.0"],
@@ -9132,6 +9134,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"
         }]
       ]],
+      ["pnp-webpack-plugin", [
+        ["npm:1.6.0", {
+          "packageLocation": "./.yarn/cache/pnp-webpack-plugin-npm-1.6.0-7644ca8f1c-1.zip/node_modules/pnp-webpack-plugin/",
+          "packageDependencies": [
+            ["pnp-webpack-plugin", "npm:1.6.0"],
+            ["ts-pnp", "virtual:7644ca8f1cd9481df6b0cef2897b70d8fae23c8acf27f22cc05e5578605780daeac7ecf25edc99b71181d42529154f5442d9e5e096007e4beccb2266cec59d85#npm:1.1.5"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
       ["portfinder", [
         ["npm:1.0.25", {
           "packageLocation": "./.yarn/cache/portfinder-npm-1.0.25-cf97715add-1.zip/node_modules/portfinder/",
@@ -11512,6 +11524,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["true-case-path", "npm:1.0.3"],
             ["glob", "npm:7.1.6"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
+      ["ts-pnp", [
+        ["virtual:7644ca8f1cd9481df6b0cef2897b70d8fae23c8acf27f22cc05e5578605780daeac7ecf25edc99b71181d42529154f5442d9e5e096007e4beccb2266cec59d85#npm:1.1.5", {
+          "packageLocation": "./.yarn/$$virtual/ts-pnp-virtual-99d651375f/0/cache/ts-pnp-npm-1.1.5-516fafd699-1.zip/node_modules/ts-pnp/",
+          "packageDependencies": [
+            ["ts-pnp", "virtual:7644ca8f1cd9481df6b0cef2897b70d8fae23c8acf27f22cc05e5578605780daeac7ecf25edc99b71181d42529154f5442d9e5e096007e4beccb2266cec59d85#npm:1.1.5"],
+            ["typescript", null]
+          ],
+          "packagePeers": [
+            "typescript"
           ],
           "linkType": "HARD"
         }]

@@ -3133,6 +3133,7 @@ __metadata:
     identity-obj-proxy: ^3.0.0
     image-webpack-loader: ^6.0.0
     node-sass: ^4.13.0
+    pnp-webpack-plugin: ^1.6.0
     prettier: ^1.19.1
     react: ^16.12.0
     react-dom: ^16.12.0
@@ -7990,6 +7991,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"pnp-webpack-plugin@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "pnp-webpack-plugin@npm:1.6.0"
+  dependencies:
+    ts-pnp: ^1.1.2
+  checksum: 2ecc30ab6781f99129ed2ce47de78aff68266aec7d33dc025d953eb01491c9087189c24249a345972b774233171d01d865661be70748700223b569099cd666dd
+  languageName: node
+  linkType: hard
+
 "portfinder@npm:^1.0.25":
   version: 1.0.25
   resolution: "portfinder@npm:1.0.25"
@@ -10142,6 +10152,18 @@ fsevents@^1.2.7:
   dependencies:
     glob: ^7.1.2
   checksum: 62527e838d861e0437c2c672c4d827894316949cfd0bbb5271bbf5aaa69a02e40313e03f3a8be12f8ff4ba8f1ef6f2327e8bab52da000c819dce028e1f960e1f
+  languageName: node
+  linkType: hard
+
+"ts-pnp@npm:^1.1.2":
+  version: 1.1.5
+  resolution: "ts-pnp@npm:1.1.5"
+  peerDependencies:
+    typescript: "*"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 6d16650b1684957b9fbbc80c0704d39a33051afccbc192c5bb314745da778292549c701a80002a102e68c9861ae258eeb8e555fcc97e7a4850b303a1f3bfa243
   languageName: node
   linkType: hard
 

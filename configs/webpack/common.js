@@ -1,10 +1,19 @@
 // shared config (dev and prod)
 const {resolve} = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const PnPpWebpackPlugin = require('pnp-webpack-plugin');
 
 module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
+    plugins: [
+      PnPpWebpackPlugin,
+    ]
+  },
+  resolveLoader: {
+    plugins: [
+      PnPpWebpackPlugin.moduleLoader(module),
+    ],
   },
   context: resolve(__dirname, '../../src'),
   module: {
