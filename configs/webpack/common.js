@@ -24,6 +24,10 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.ico$/,
+        use: ['file-loader'],
+      },
+      {
         test: /\.css$/,
         use: [
           'style-loader',
@@ -48,7 +52,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({template: 'index.html.ejs',}),
+    new HtmlWebpackPlugin({template: 'index.html.ejs', favicon: 'favicon.ico'}),
   ],
   performance: {
     hints: false,
