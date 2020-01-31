@@ -19,7 +19,7 @@
   },
   "scripts": {
     "prebuild": "yarn policies set-version berry",
-    "build": "yarn clean-dist && webpack -p --config=configs/webpack/prod",
+    "build": "webpack -p --config=configs/webpack/prod",
     "clean-dist": "rimraf public/*",
     "prettier-write": "prettier --write \"{src,tests}/**/*.{js,jsx,css,scss}\"",
     "prettier-check": "prettier --list-different \"{src,tests}/**/*.{js,jsx,css,scss}\"",
