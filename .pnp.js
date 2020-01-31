@@ -150,7 +150,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["css-loader", "virtual:742c060d3b8e0ae7893b155b507d7fe4c9f671265cbca6a0f32c035a18790d4295efa0f6ce523d65fa707fe4218b15f4cf1385c7b6c5dffcabcbaf22be210920#npm:3.4.2"],
             ["file-loader", "virtual:742c060d3b8e0ae7893b155b507d7fe4c9f671265cbca6a0f32c035a18790d4295efa0f6ce523d65fa707fe4218b15f4cf1385c7b6c5dffcabcbaf22be210920#npm:5.0.2"],
             ["html-webpack-plugin", "virtual:742c060d3b8e0ae7893b155b507d7fe4c9f671265cbca6a0f32c035a18790d4295efa0f6ce523d65fa707fe4218b15f4cf1385c7b6c5dffcabcbaf22be210920#npm:3.2.0"],
-            ["identity-obj-proxy", "npm:3.0.0"],
             ["image-webpack-loader", "npm:6.0.0"],
             ["node-sass", "npm:4.13.1"],
             ["pnp-webpack-plugin", "npm:1.6.0"],
@@ -3726,7 +3725,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["css-loader", "virtual:742c060d3b8e0ae7893b155b507d7fe4c9f671265cbca6a0f32c035a18790d4295efa0f6ce523d65fa707fe4218b15f4cf1385c7b6c5dffcabcbaf22be210920#npm:3.4.2"],
             ["file-loader", "virtual:742c060d3b8e0ae7893b155b507d7fe4c9f671265cbca6a0f32c035a18790d4295efa0f6ce523d65fa707fe4218b15f4cf1385c7b6c5dffcabcbaf22be210920#npm:5.0.2"],
             ["html-webpack-plugin", "virtual:742c060d3b8e0ae7893b155b507d7fe4c9f671265cbca6a0f32c035a18790d4295efa0f6ce523d65fa707fe4218b15f4cf1385c7b6c5dffcabcbaf22be210920#npm:3.2.0"],
-            ["identity-obj-proxy", "npm:3.0.0"],
             ["image-webpack-loader", "npm:6.0.0"],
             ["node-sass", "npm:4.13.1"],
             ["pnp-webpack-plugin", "npm:1.6.0"],
@@ -5600,15 +5598,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"
         }]
       ]],
-      ["harmony-reflect", [
-        ["npm:1.6.1", {
-          "packageLocation": "./.yarn/cache/harmony-reflect-npm-1.6.1-dacf7e046e-1.zip/node_modules/harmony-reflect/",
-          "packageDependencies": [
-            ["harmony-reflect", "npm:1.6.1"]
-          ],
-          "linkType": "HARD"
-        }]
-      ]],
       ["has", [
         ["npm:1.0.3", {
           "packageLocation": "./.yarn/cache/has-npm-1.0.3-b7f00631c1-1.zip/node_modules/has/",
@@ -6010,16 +5999,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["icss-utils", "npm:4.1.1"],
             ["postcss", "npm:7.0.26"]
-          ],
-          "linkType": "HARD"
-        }]
-      ]],
-      ["identity-obj-proxy", [
-        ["npm:3.0.0", {
-          "packageLocation": "./.yarn/cache/identity-obj-proxy-npm-3.0.0-080ab9ac1e-1.zip/node_modules/identity-obj-proxy/",
-          "packageDependencies": [
-            ["identity-obj-proxy", "npm:3.0.0"],
-            ["harmony-reflect", "npm:1.6.1"]
           ],
           "linkType": "HARD"
         }]

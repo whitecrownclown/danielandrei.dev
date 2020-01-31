@@ -3091,7 +3091,6 @@ __metadata:
     css-loader: ^3.4.1
     file-loader: ^5.0.2
     html-webpack-plugin: ^3.2.0
-    identity-obj-proxy: ^3.0.0
     image-webpack-loader: ^6.0.0
     node-sass: ^4.13.0
     pnp-webpack-plugin: ^1.6.0
@@ -4804,13 +4803,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"harmony-reflect@npm:^1.4.6":
-  version: 1.6.1
-  resolution: "harmony-reflect@npm:1.6.1"
-  checksum: 15b389e2421a03505a44c7d50b6447120913c5a5398765df014e04e8b90f5a92ec208061616ba11e06d9a12e66de3318de46970887d79fcf860ad800f213c097
-  languageName: node
-  linkType: hard
-
 "has-ansi@npm:^2.0.0":
   version: 2.0.0
   resolution: "has-ansi@npm:2.0.0"
@@ -5173,15 +5165,6 @@ fsevents@^1.2.7:
   dependencies:
     postcss: ^7.0.14
   checksum: 863d5abd8892a1d6fad31488cad5025597d6b89ca221e82ddd7b00c3db8c57c2a11cc5b17a3eb2082ff1259a45e584ec80fdfe79f553a6a43afa8747eed2f75d
-  languageName: node
-  linkType: hard
-
-"identity-obj-proxy@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "identity-obj-proxy@npm:3.0.0"
-  dependencies:
-    harmony-reflect: ^1.4.6
-  checksum: 9c9c6a2135ba77800bd47e53d8eeffc494c7b4a7daca57e7fea76d2934bbd8e3ee7c7c583ff5b0570efb33ea40a2efcccc75ecf4c89d5fc7f3261a9909db39cf
   languageName: node
   linkType: hard
 
