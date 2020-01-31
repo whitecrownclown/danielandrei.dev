@@ -18,7 +18,7 @@
     "url": "git+https://github.com/whitecrownclown/danielandrei.dev.git"
   },
   "scripts": {
-    "build": "npm i yarn@berry && yarn clean-dist && webpack -p --config=configs/webpack/prod",
+    "build": "yarn clean-dist && webpack -p --config=configs/webpack/prod",
     "clean-dist": "rimraf dist/*",
     "prettier-write": "prettier --write \"{src,tests}/**/*.{js,jsx,css,scss}\"",
     "prettier-check": "prettier --list-different \"{src,tests}/**/*.{js,jsx,css,scss}\"",
