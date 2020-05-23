@@ -15,4 +15,5 @@ export const ITEMS = [
     src: ProfilePic,
     alt: 'author_image',
   },
+  { id: 3, type: TEXT, text: 'WORK IN PROGRESS' },
 ];

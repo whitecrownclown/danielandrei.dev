@@ -23,7 +23,7 @@
     "clean-dist": "rimraf public/*",
     "prettier-write": "prettier --write \"{src,tests}/**/*.{js,jsx,css,scss}\"",
     "prettier-check": "prettier --list-different \"{src,tests}/**/*.{js,jsx,css,scss}\"",
-    "start": "yarn start-dev",
+    "start": "npm run start-dev",
     "start-dev": "webpack-dev-server --config=configs/webpack/dev"
   },
   "devDependencies": {
@@ -32,6 +32,7 @@
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.7.4",
     "@hot-loader/react-dom": "^16.11.0",
+    "@svgr/webpack": "^5.4.0",
     "@types/react": "^16.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
