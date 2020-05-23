@@ -17,6 +17,7 @@ module.exports = merge(commonConfig, {
     }
   },
   devServer: {
+    historyApiFallback: true,
     hot: true // enable HMR on the server
   },
   devtool: 'cheap-module-eval-source-map',
