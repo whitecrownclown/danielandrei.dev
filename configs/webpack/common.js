@@ -42,16 +42,18 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
-          { loader: 'css-loader', options: { importLoaders: 1 } },
-        ],
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          { loader: 'css-loader', options: { importLoaders: 1 } },
-          'sass-loader',
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[name]__[local]__[hash:base64:5]',
+              },
+            },
+          },
+          {
+            loader: 'postcss-loader',
+          },
         ],
       },
       {

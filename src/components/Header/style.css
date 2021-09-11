@@ -1,0 +1,24 @@
+.header {
+  position: fixed;
+  top: 1.5em;
+  width: 100%;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+
+  z-index: 1;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+
+    li {
+      padding: 0 .25em;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+}

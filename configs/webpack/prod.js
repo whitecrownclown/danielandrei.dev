@@ -13,6 +13,12 @@ module.exports = merge(commonConfig, {
     path: resolve(__dirname, '../../public'),
     publicPath: '/',
   },
+  resolve: {
+    alias: {
+      // Webpack < 5 doesn't polyfill node core modules anymore
+      path: 'path-browserify',
+    },
+  },
   plugins: [],
   optimization: {
     splitChunks: {

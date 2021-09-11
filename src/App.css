@@ -1,0 +1,29 @@
+:global {
+  @font-face {
+    font-family: DMMono;
+    src: url('./assets/fonts/DMMono-Regular.ttf');
+  }
+
+  body {
+    font-family: DMMono;
+    overflow: hidden;
+    background: #090b1f;
+    background: radial-gradient(
+      at 50% 70%,
+      #200f20 10%,
+      #090b1f 80%,
+      #050523 100%
+    );
+  }
+
+  body,
+  #root {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #canvas-container {
+    width: 100%;
+    height: 100%;
+  }
+}
