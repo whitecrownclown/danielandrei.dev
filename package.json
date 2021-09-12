@@ -18,8 +18,7 @@
     "url": "git+https://github.com/whitecrownclown/danielandrei.dev.git"
   },
   "scripts": {
-    "prebuild": "yarn policies set-version berry",
-    "build": "webpack -p --config=configs/webpack/prod",
+    "build": "webpack --config=configs/webpack/prod",
     "clean-dist": "rimraf public/*",
     "prettier-write": "prettier --write \"{src,tests}/**/*.{js,jsx,css,scss}\"",
     "prettier-check": "prettier --list-different \"{src,tests}/**/*.{js,jsx,css,scss}\"",
