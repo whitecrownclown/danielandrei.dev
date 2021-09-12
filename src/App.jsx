@@ -130,7 +130,7 @@ const App = () => {
     <div id="canvas-container">
       <Header />
       <Canvas
-        camera={{ position: [0, -30, -300], fov: 40, far: 10000 }}
+        camera={{ position: [0, -30, -7000], fov: 40, far: 10000 }}
         colorManagement={false}
       >
         <ZoomIn />
