@@ -1,24 +1,22 @@
 .header {
-  position: fixed;
-  top: 1.5em;
-  width: 100%;
-  color: #fff;
-  justify-content: center;
   display: flex;
-
+  position: fixed;
+  top: .5em;
+  right: .5em;
+  align-items: center;
+  justify-content: flex-end;
   z-index: 1;
 
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-flow: row nowrap;
+  width: 100%;
+  color: #fff;
 
-    li {
-      padding: 0 .25em;
-      cursor: pointer;
-      font-size: 20px;
-    }
+  svg {
+    fill: #fff;
   }
+}
+
+.link {
+  padding: 4px;
+  width: 24px;
+  height: 24px;
 }

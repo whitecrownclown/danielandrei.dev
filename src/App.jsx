@@ -12,7 +12,6 @@ import moonImg from './assets/images/moon.jpg';
 import moonBump from './assets/images/moon_bump.jpg';
 
 import Header from './components/Header';
-import Footer from './components/Footer';
 
 import './App.css';
 
@@ -148,7 +147,6 @@ const App = () => {
           </Sun>
         </Suspense>
       </Canvas>
-      <Footer />
     </div>
   );
 };
