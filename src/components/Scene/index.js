@@ -18,7 +18,14 @@ export default function Scene() {
       <OrbitControls />
       <ambientLight intensity={0.1} />
       <Suspense fallback={null}>
-        <Stars count={10000} />
+        <Stars
+          radius={100}
+          depth={50}
+          count={10000}
+          factor={4}
+          saturation={0}
+          fade
+        />
         <Sun>
           <Earth>
             <Moon />
