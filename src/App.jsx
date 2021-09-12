@@ -67,8 +67,13 @@ const Sun = ({ children }) => {
         width={5}
         height={5}
       />
-      <sphereBufferGeometry attach="geometry" args={[2, 32, 32]} />
-      <meshStandardMaterial attach="material" map={texture} />
+      <sphereBufferGeometry attach="geometry" args={[3, 256, 256]} />
+      <meshLambertMaterial
+        emissive="#FCD440"
+        emissiveIntensity={2}
+        attach="material"
+        emissiveMap={texture}
+      />
       {children}
     </mesh>
   );
@@ -90,7 +95,7 @@ const Earth = () => {
   });
 
   return (
-    <group ref={ref} position={[12, 0, 0]}>
+    <group ref={ref} position={[24, 0, 0]}>
       <mesh
         ref={earthRef}
         onPointerOver={() => {
@@ -100,7 +105,7 @@ const Earth = () => {
           setHover(false);
         }}
       >
-        <sphereBufferGeometry attach="geometry" args={[0.5, 32, 32]} />
+        <sphereBufferGeometry attach="geometry" args={[1, 64, 64]} />
         <meshStandardMaterial attach="material" map={earth} />
         <meshStandardMaterial
           attach="material"
@@ -114,7 +119,7 @@ const Earth = () => {
 };
 
 function ZoomIn() {
-  const vec = { x: 0, y: 10, z: -36 };
+  const vec = { x: 0, y: 10, z: -50 };
   return useFrame(({ camera }) => camera.position.lerp(vec, 0.02));
 }
 
@@ -122,17 +127,13 @@ const App = () => {
   return (
     <div id="canvas-container">
       <Header />
-      <Canvas camera={{ position: [0, -30, -300], fov: 40, far: 10000 }}>
+      <Canvas
+        camera={{ position: [0, -30, -300], fov: 40, far: 10000 }}
+        colorManagement={false}
+      >
         <ZoomIn />
         <OrbitControls />
-        <ambientLight intensity={0.5} />
-        <rectAreaLight
-          position={[0, 0, 0]}
-          intensity={20}
-          width={10}
-          height={10}
-          lookAt={[0, 0, 0]}
-        />
+        <ambientLight intensity={0.1} />
         <Suspense fallback={null}>
           <Stars />
           <Sun>
