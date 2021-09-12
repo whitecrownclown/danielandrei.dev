@@ -1,4 +1,4 @@
-import React, { Suspense, useMemo, useRef, useState } from 'react';
+import React, { Suspense, useMemo, useRef } from 'react';
 import { hot } from 'react-hot-loader';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useTexture } from '@react-three/drei';
@@ -6,6 +6,7 @@ import { OrbitControls, useTexture } from '@react-three/drei';
 import earthImg from './assets/images/earth.jpg';
 import bumpImg from './assets/images/bump.jpg';
 import sunImg from './assets/images/sun.jpg';
+import moonImg from './assets/images/moon.jpg';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -24,9 +25,7 @@ function Stars({ count = 5000 }) {
       const y =
         r * Math.sin(theta) * Math.sin(phi) + (-2000 + Math.random() * 4000);
       const z = r * Math.cos(phi) + (-1000 + Math.random() * 2000);
-      positions.push(x);
-      positions.push(y);
-      positions.push(z);
+      positions.push(x, y, z);
     }
     return new Float32Array(positions);
   }, [count]);
@@ -79,32 +78,18 @@ const Sun = ({ children }) => {
   );
 };
 
-const Earth = () => {
+const Earth = ({ children }) => {
   const [earth, bump] = useTexture([earthImg, bumpImg]);
   const ref = useRef();
   const earthRef = useRef();
 
-  const [hover, setHover] = useState(false);
-
   useFrame(() => {
-    if (hover) {
-      earthRef.current.rotation.y += 0.015;
-    }
-
     earthRef.current.rotation.y += 0.01;
   });
 
   return (
     <group ref={ref} position={[24, 0, 0]}>
-      <mesh
-        ref={earthRef}
-        onPointerOver={() => {
-          setHover(true);
-        }}
-        onPointerOut={() => {
-          setHover(false);
-        }}
-      >
+      <mesh ref={earthRef}>
         <sphereBufferGeometry attach="geometry" args={[1, 64, 64]} />
         <meshStandardMaterial attach="material" map={earth} />
         <meshStandardMaterial
@@ -113,8 +98,25 @@ const Earth = () => {
           bumpMap={bump}
           bumpScale={0.05}
         />
+        {children}
       </mesh>
     </group>
+  );
+};
+
+const Moon = () => {
+  const ref = useRef();
+  const texture = useTexture(moonImg);
+
+  useFrame(() => {
+    ref.current.rotation.y += 0.0005;
+  });
+
+  return (
+    <mesh position={[0, 0.5, 4]} ref={ref}>
+      <sphereBufferGeometry attach="geometry" args={[0.4, 64, 64]} />
+      <meshStandardMaterial attach="material" map={texture} />
+    </mesh>
   );
 };
 
@@ -137,7 +139,9 @@ const App = () => {
         <Suspense fallback={null}>
           <Stars />
           <Sun>
-            <Earth />
+            <Earth>
+              <Moon />
+            </Earth>
           </Sun>
         </Suspense>
       </Canvas>
