@@ -5,8 +5,11 @@ import { OrbitControls, useTexture } from '@react-three/drei';
 
 import earthImg from './assets/images/earth.jpg';
 import bumpImg from './assets/images/bump.jpg';
+
 import sunImg from './assets/images/sun.jpg';
+
 import moonImg from './assets/images/moon.jpg';
+import moonBump from './assets/images/moon_bump.jpg';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -106,7 +109,7 @@ const Earth = ({ children }) => {
 
 const Moon = () => {
   const ref = useRef();
-  const texture = useTexture(moonImg);
+  const [texture, bump] = useTexture([moonImg, moonBump]);
 
   useFrame(() => {
     ref.current.rotation.y += 0.0005;
@@ -115,7 +118,7 @@ const Moon = () => {
   return (
     <mesh position={[0, 0.5, 4]} ref={ref}>
       <sphereBufferGeometry attach="geometry" args={[0.4, 64, 64]} />
-      <meshStandardMaterial attach="material" map={texture} />
+      <meshStandardMaterial attach="material" map={texture} bumpMap={bump} bumpScale={0.2} />
     </mesh>
   );
 };
@@ -130,7 +133,7 @@ const App = () => {
     <div id="canvas-container">
       <Header />
       <Canvas
-        camera={{ position: [0, -30, -7000], fov: 40, far: 10000 }}
+        camera={{ position: [0, -30, -10000], fov: 40, far: 10000 }}
         colorManagement={false}
       >
         <ZoomIn />
