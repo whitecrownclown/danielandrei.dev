@@ -15,7 +15,7 @@ export default function Moon() {
 
   return (
     <mesh position={[0, 0.5, 4]} ref={ref}>
-      <sphereBufferGeometry attach="geometry" args={[0.4, 64, 64]} />
+      <sphereBufferGeometry attach="geometry" args={[0.3, 32, 32]} />
       <meshStandardMaterial
         attach="material"
         map={texture}

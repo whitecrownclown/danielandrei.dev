@@ -40,9 +40,9 @@ export default function Scene() {
             lights={[ambientLightRef]}
             selection={[sunRef]}
             selectionLayer={5}
-            intensity={4.0}
+            intensity={3.0}
             luminanceThreshold={0.25}
-            luminanceSmoothing={0.5}
+            luminanceSmoothing={0.25}
           />
         </EffectComposer>
       </Suspense>

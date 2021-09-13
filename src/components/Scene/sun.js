@@ -16,10 +16,9 @@ const Sun = forwardRef(({ children }, ref) => {
       <pointLight // Sunlight
         intensity={2}
         position={[0, 0, 0]}
-        width={5}
-        height={5}
+        decay={2}
       />
-      <sphereBufferGeometry attach="geometry" args={[3, 256, 256]} />
+      <sphereBufferGeometry attach="geometry" args={[4, 256, 256]} />
       <meshLambertMaterial
         emissive="#FCD440"
         emissiveIntensity={2}
