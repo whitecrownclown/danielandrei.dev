@@ -1,13 +1,7 @@
 :global {
-  @font-face {
-    font-family: DMMono;
-    src: url('./assets/fonts/DMMono-Regular.ttf');
-  }
-
   body {
     margin: 0;
     padding: 0;
-    font-family: DMMono;
     overflow: hidden;
     background: #090b1f;
     background: radial-gradient(
