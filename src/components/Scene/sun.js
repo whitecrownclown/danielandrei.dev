@@ -1,12 +1,11 @@
-import React, { useRef } from 'react';
+import React, { forwardRef } from 'react';
 import { useTexture } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
 import sun from '../../assets/images/sun.jpg';
 
-export default function Sun({ children }) {
+const Sun = forwardRef(({ children }, ref) => {
   const texture = useTexture(sun);
-  const ref = useRef();
 
   useFrame(() => {
     ref.current.rotation.y += 0.0015;
@@ -30,4 +29,8 @@ export default function Sun({ children }) {
       {children}
     </mesh>
   );
-}
+});
+
+Sun.displayName = 'Sun';
+
+export default Sun;
