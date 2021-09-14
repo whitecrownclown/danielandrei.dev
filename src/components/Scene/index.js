@@ -1,4 +1,4 @@
-import React, { Suspense, useRef } from 'react';
+import React, { Suspense, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import { HalfFloatType } from 'three';
@@ -14,13 +14,15 @@ export default function Scene() {
   const sunRef = useRef();
   const ambientLightRef = useRef();
 
+  const [canUseControls, setCanUseControls] = useState(false);
+
   return (
     <Canvas
-      camera={{ position: [0, -30, -3000], fov: 40, far: 10000 }}
+      camera={{ position: [0, 0, -3000], fov: 40, far: 10000 }}
       colorManagement={false}
     >
-      <ZoomIn />
-      <OrbitControls />
+      <ZoomIn enabled={!canUseControls} onEnd={setCanUseControls} />
+      <OrbitControls enabled={canUseControls} />
       <ambientLight intensity={0.1} ref={ambientLightRef} />
       <Suspense fallback={null}>
         <Stars
