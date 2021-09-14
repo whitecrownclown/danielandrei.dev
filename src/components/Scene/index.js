@@ -1,6 +1,7 @@
 import React, { Suspense, useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
+import { HalfFloatType } from 'three';
 import { EffectComposer, SelectiveBloom } from '@react-three/postprocessing';
 
 import ZoomIn from './zoom';
@@ -35,14 +36,14 @@ export default function Scene() {
             <Moon />
           </Earth>
         </Sun>
-        <EffectComposer>
+        <EffectComposer frameBufferType={HalfFloatType}>
           <SelectiveBloom
             lights={[ambientLightRef]}
             selection={[sunRef]}
             selectionLayer={5}
             intensity={3.0}
-            luminanceThreshold={0.25}
-            luminanceSmoothing={0.25}
+            luminanceThreshold={0.2}
+            luminanceSmoothing={0.85}
           />
         </EffectComposer>
       </Suspense>
