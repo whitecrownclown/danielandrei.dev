@@ -17,6 +17,7 @@ const Sun = forwardRef(({ children }, ref) => {
         intensity={2}
         position={[0, 0, 0]}
         decay={2}
+        castShadow
       />
       <sphereBufferGeometry attach="geometry" args={[4, 256, 256]} />
       <meshLambertMaterial

@@ -16,7 +16,7 @@ export default function Earth({ children }) {
 
   return (
     <group ref={ref} position={[24, 0, 0]}>
-      <mesh ref={earthRef}>
+      <mesh ref={earthRef} castShadow receiveShadow>
         <sphereBufferGeometry attach="geometry" args={[1, 64, 64]} />
         <meshStandardMaterial attach="material" map={earth} />
         <meshStandardMaterial

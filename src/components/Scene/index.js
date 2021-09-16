@@ -20,6 +20,7 @@ export default function Scene() {
     <Canvas
       camera={{ position: [0, 0, -3000], fov: 40, far: 10000 }}
       colorManagement={false}
+      shadows={{ enabled: true }}
     >
       <ZoomIn enabled={!canUseControls} onEnd={setCanUseControls} />
       <OrbitControls enabled={canUseControls} />
