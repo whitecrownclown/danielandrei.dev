@@ -10,6 +10,8 @@ import Sun from './sun';
 import Earth from './earth';
 import Moon from './moon';
 
+import Ship from './ship';
+
 export default function Scene() {
   const sunRef = useRef();
   const ambientLightRef = useRef();
@@ -39,6 +41,7 @@ export default function Scene() {
             <Moon />
           </Earth>
         </Sun>
+        <Ship />
         <EffectComposer frameBufferType={HalfFloatType}>
           <SelectiveBloom
             lights={[ambientLightRef]}
