@@ -2,11 +2,11 @@ import React, { useRef } from 'react';
 import { useTexture } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
-import earthImg from '../../assets/images/earth.jpg';
-import bumpImg from '../../assets/images/bump.jpg';
+import earthMap from '../../assets/images/earthmap.jpg';
+import earthBump from '../../assets/images/earthbump.jpg';
 
 export default function Earth({ children }) {
-  const [earth, bump] = useTexture([earthImg, bumpImg]);
+  const [earth, bump] = useTexture([earthMap, earthBump]);
   const ref = useRef();
   const earthRef = useRef();
 
@@ -15,7 +15,7 @@ export default function Earth({ children }) {
   });
 
   return (
-    <group ref={ref} position={[24, 0, 0]}>
+    <group ref={ref} position={[30, 0, 0]}>
       <mesh ref={earthRef} castShadow receiveShadow>
         <sphereBufferGeometry attach="geometry" args={[1, 64, 64]} />
         <meshStandardMaterial attach="material" map={earth} />

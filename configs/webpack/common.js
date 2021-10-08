@@ -20,7 +20,7 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.ico|.fbx|.gltf$/,
+        test: /\.(ico|fbx|gltf|webm|mp3)$/,
         use: ['file-loader'],
       },
       {

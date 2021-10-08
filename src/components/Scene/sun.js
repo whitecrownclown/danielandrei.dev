@@ -2,10 +2,10 @@ import React, { forwardRef } from 'react';
 import { useTexture } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
-import sun from '../../assets/images/sun.jpg';
+import sunMap from '../../assets/images/sunmap.jpg';
 
 const Sun = forwardRef(({ children }, ref) => {
-  const texture = useTexture(sun);
+  const texture = useTexture(sunMap);
 
   useFrame(() => {
     ref.current.rotation.y += 0.0015;

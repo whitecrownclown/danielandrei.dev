@@ -4,13 +4,20 @@ import { OrbitControls, Stars } from '@react-three/drei';
 import { HalfFloatType } from 'three';
 import { EffectComposer, SelectiveBloom } from '@react-three/postprocessing';
 
+import backgroundSound from '../../assets/background.mp3';
+
 import ZoomIn from './zoom';
+import Sound from './sound';
 
 import Sun from './sun';
+
+import Mercury from './mercury';
+import Venus from './venus';
+
 import Earth from './earth';
 import Moon from './moon';
 
-import Ship from './ship';
+// import Ship from './ship';
 
 export default function Scene() {
   const sunRef = useRef();
@@ -37,11 +44,14 @@ export default function Scene() {
           fade
         />
         <Sun ref={sunRef}>
+          <Mercury />
+          <Venus />
           <Earth>
             <Moon />
           </Earth>
         </Sun>
-        <Ship />
+        {/* <Ship /> */}
+        <Sound url={backgroundSound} />
         <EffectComposer frameBufferType={HalfFloatType}>
           <SelectiveBloom
             lights={[ambientLightRef]}
