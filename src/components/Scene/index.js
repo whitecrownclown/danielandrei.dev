@@ -1,6 +1,6 @@
 import React, { Suspense, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Stars } from '@react-three/drei';
+import { Html, Loader, OrbitControls, Stars } from '@react-three/drei';
 import { HalfFloatType } from 'three';
 import { EffectComposer, SelectiveBloom } from '@react-three/postprocessing';
 
@@ -17,7 +17,9 @@ import Venus from './venus';
 import Earth from './earth';
 import Moon from './moon';
 
-// import Ship from './ship';
+import Ship from './ship';
+
+const containerStyles = { transform: 'scale(1.6)' };
 
 export default function Scene() {
   const sunRef = useRef();
@@ -27,14 +29,20 @@ export default function Scene() {
 
   return (
     <Canvas
-      camera={{ position: [0, 0, -3000], fov: 40, far: 10000 }}
+      camera={{ position: [0, 0, -1800], fov: 50, far: 1000 }}
       colorManagement={false}
       shadows={{ enabled: true }}
     >
       <ZoomIn enabled={!canUseControls} onEnd={setCanUseControls} />
       <OrbitControls enabled={canUseControls} />
       <ambientLight intensity={0.1} ref={ambientLightRef} />
-      <Suspense fallback={null}>
+      <Suspense
+        fallback={
+          <Html>
+            <Loader containerStyles={containerStyles} />
+          </Html>
+        }
+      >
         <Stars
           radius={100}
           depth={50}
@@ -50,7 +58,7 @@ export default function Scene() {
             <Moon />
           </Earth>
         </Sun>
-        {/* <Ship /> */}
+        <Ship />
         <Sound url={backgroundSound} />
         <EffectComposer frameBufferType={HalfFloatType}>
           <SelectiveBloom
